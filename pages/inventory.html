@@ -1,0 +1,35 @@
+<link rel="stylesheet" href="../css/inventory.css">
+
+<section class="page-section">
+    <h2>Inventory</h2>
+  
+    <select id="inventory-group-select" class="form-control mb-2"></select>
+  
+    <ul id="inventory-list" class="inventory-list"></ul>
+  
+    <button id="open-add-inventory-modal" class="fab">Add</button>
+  
+    <!-- Add Inventory Modal -->
+    <div id="inventory-modal" class="modal hidden">
+      <form id="inventory-form">
+        <h3>Add Item</h3>
+        <select id="inventory-group-select-modal" class="form-control" required></select>
+        <select id="inventory-category" class="form-control" required>
+          <option value="">-- Select Category --</option>
+          <option value="Grocery">Grocery</option>
+          <option value="Furniture">Furniture</option>
+          <option value="Appliances">Appliances</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Kitchen">Kitchen</option>
+        </select>
+        <input type="text" id="item-name" class="form-control" placeholder="Item Name" required />
+        <input type="number" id="item-quantity" class="form-control" placeholder="Quantity" required />
+        <input type="number" id="item-cost" class="form-control" placeholder="Cost" required />
+        <button type="submit" class="btn">Add</button>
+        <button type="button" id="cancel-inventory-modal" class="btn">Cancel</button>
+      </form>
+    </div>
+  </section>
+  
+
+<script src="../js/inventory.js"></script>

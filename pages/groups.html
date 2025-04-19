@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="../css/groups.css">
+
+<div class="group-container">
+    <h2>Your Groups</h2>
+    <button id="create-group-btn">+ Create Group</button>
+    <ul id="group-list"></ul>
+
+    <!-- Modal for group creation -->
+    <div id="group-modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h3>Create New Group</h3>
+            <input type="text" id="group-name" placeholder="Group Name" required>
+            <select id="group-members" multiple></select>
+            <button id="submit-group">Create</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/groups.js"></script>

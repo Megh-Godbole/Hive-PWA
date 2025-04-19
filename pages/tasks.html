@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="../css/task.css">
+
+<div class="task-container">
+  <h2>Task Management</h2>
+
+  <!-- Group Dropdown -->
+  <select id="group-select">
+    <option value="">Select Group</option>
+    <!-- Groups will be loaded dynamically -->
+  </select>
+
+  <!-- Task List -->
+  <ul id="task-list"></ul>
+
+  <!-- Add Task Button -->
+  <button id="open-add-task-modal">Add Task</button>
+
+  <!-- Add Task Modal -->
+  <div id="task-modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Add Task</h3>
+      <form id="task-form">
+        <input type="text" id="task-name" placeholder="Task Name" required>
+
+        <select id="task-group-select" required>
+          <option value="">Select Group</option>
+        </select>
+
+        <select id="task-members" multiple disabled required>
+          <!-- Loaded based on group -->
+        </select>
+
+        <select id="task-status" required>
+          <option value="pending">Pending</option>
+          <option value="done">Done</option>
+        </select>
+
+        <button type="submit">Add Task</button>
+        <button type="button" id="cancel-task-modal">Cancel</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="../js/task.js"></script>
