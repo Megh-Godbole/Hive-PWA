@@ -71,13 +71,6 @@ $(document).ready(function () {
                 sw.sync.register("sync-tasks");
             });
         }
-
-        if ('Notification' in window && Notification.permission === "granted") {
-            new Notification("Hive Update", {
-                body: "New task added!",
-                icon: "assets/icons/web-app-manifest-192x192.png"
-            });
-        }
     }
 
     // Dropdown Change to Load Tasks
@@ -115,6 +108,13 @@ $(document).ready(function () {
         // Close and reset modal
         $("#task-modal").addClass("hidden");
         this.reset();
+
+        if ('Notification' in window && Notification.permission === "granted") {
+            new Notification("Hive Update", {
+                body: "New task added!",
+                icon: "assets/icons/web-app-manifest-192x192.png"
+            });
+        }
 
         if ($("#group-select").val() === groupId) {
             loadTasks(groupId);
