@@ -109,6 +109,7 @@ $(document).ready(function () {
         $("#task-modal").addClass("hidden");
         this.reset();
 
+        // Notify user once task is added.
         if ('Notification' in window && Notification.permission === "granted") {
             new Notification("Hive Update", {
                 body: "New task added!",
